@@ -6,6 +6,7 @@ const FunctionalComponent = (props) => {
     const [changeName, setChangeName] = useState("");
     const subtract = () => setCount(count - 1)
     const [name, setName] = useState("")
+    const [dept, setDept] = useState("")
     
     // const [name, age, company, setName] = props; 
     // By assigning variable to props we can remove props.name etc to just {name}
@@ -18,10 +19,13 @@ const FunctionalComponent = (props) => {
             <button onClick={subtract}>Click on me to subtract -1 </button>
          <h1>{count}</h1>
          <h2>My name is {props.name}, I am from {props.dept} dept and my ID is {props.id}</h2>
-        <input type="text" onChange={(e) => setChangeName(e.target.value)}/>
+         {/* <h2>My name is {name}, I am from {dept} dept and my ID is {id}</h2> */}
+        <input type="text" onChange={(e) => setChangeName(e.target.value)}/> 
         <button onClick= {() => props.setName("Azmathulla")}> Change Name to Azmathulla</button>
         <button onClick = {() => props.setName(changeName)}>Change Name</button>
-        </div>
+        {/* <input type="text" onChange={(e) => setChangeName(e.target.value)}/> 
+        <button onClick = {() => props.setDept(changeName)}>Change Name setConfig</button> */}
+        </div> 
     )
 }
 

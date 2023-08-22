@@ -7,6 +7,7 @@ import { useState } from "react";
 function App() {
   const company = "Az Groups with me"
   const [name, setName] = useState("Azmath");
+  const [dept, setDept] = useState("")
 
   return (
     <div className="App">
@@ -14,7 +15,7 @@ function App() {
       <h1> Hi Wolrd, I am from React </h1>
       <ClassComponet /> 
       <FunctionalComponent name = {name} dept = "CS" id = {10} setName = {setName} />
-      {/* <FunctionalComponent name = "Azmath" dept = "CS" id = {10} /> */}
+      {/* <FunctionalComponent name = {name} dept = {dept} id = {10}  setDept = {setDept} />  */}
       </header>
     </div>
   );
